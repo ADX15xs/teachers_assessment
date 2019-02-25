@@ -5,16 +5,12 @@ const json = require('koa-json')
 const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
-const cors = require('koa-cors')
 
 const index = require('./routes/index')
 const users = require('./routes/users')
 
 // error handler
 onerror(app)
-
-//使用cors解决跨域问题
-app.use(cors())
 
 // middlewares
 app.use(bodyparser({

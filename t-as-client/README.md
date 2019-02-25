@@ -1,6 +1,6 @@
-# client
+# t-as-client
 
-> t_as_client
+> teachers_assessment
 
 ## Build Setup
 
