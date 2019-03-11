@@ -4,7 +4,7 @@
     <nav class="nav-transversal">
       <ul>
         <li v-for="(nav, index) in navs" :key="index" @click="setNavAct(nav['menu'])">
-          <router-link :to="nav['url']">
+          <router-link :to="nav['menu'][0]['url']">
             <i :class="`fa fa-${nav['fa']} fa-fw`"></i> {{ nav['link'] }}</router-link></li>
       </ul>
     </nav>

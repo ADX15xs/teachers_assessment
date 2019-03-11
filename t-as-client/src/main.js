@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
+import 'font-awesome/css/font-awesome.min.css'
 
 Vue.config.productionTip = false
 

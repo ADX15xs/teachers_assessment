@@ -1,7 +1,6 @@
 <template>
   <div id="default">
     <h1 class="hid">{{ msg }}</h1>
-    <h2>首页</h2>
     <router-view/>
   </div>
 </template>
@@ -12,12 +11,10 @@ export default {
   data () {
     return {
       msg: 'Default',
-      title: '首页的子组件',
-      data: []
+      title: '首页'
     }
   },
   mounted(){
-    this.$router.push('/main/last-msg');
     this.$emit('setTitle', this.title);
   }
 }

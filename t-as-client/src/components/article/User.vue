@@ -1,7 +1,6 @@
 <template>
   <div id="user">
     <h1 class="hid">{{ msg }}</h1>
-    <h2>我的提交记录</h2>
     <router-view/>
   </div>
 </template>
@@ -17,7 +16,6 @@ export default {
     }
   },
   mounted(){
-    this.$router.push('user/ul-msg');
     this.$emit('setTitle', this.title);
   }
 }
