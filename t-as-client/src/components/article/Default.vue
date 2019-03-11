@@ -2,6 +2,7 @@
   <div id="default">
     <h1 class="hid">{{ msg }}</h1>
     <h2>首页</h2>
+    <router-view/>
   </div>
 </template>
 
@@ -16,6 +17,7 @@ export default {
     }
   },
   mounted(){
+    this.$router.push('/main/last-msg');
     this.$emit('setTitle', this.title);
   }
 }

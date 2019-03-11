@@ -20,27 +20,19 @@ export default {
     return {
       msg: 'IndexPage',
       navs: [
-        {fa:'free-code-camp', link:'首页', url:'/', menu:[
-          {fa:'free-code-camp', link:'首页001'},
-          {fa:'free-code-camp', link:'首页002'}
+        {fa:'free-code-camp', link:'首页', url:'/main', menu:[
+          {fa:'free-code-camp', link:'最新消息', url:'/main/last-msg'},
+          {fa:'free-code-camp', link:'下载模板', url:'/main/dl-model'}
         ]},
         {fa:'cloud-upload', link:'上传', url:'/upload', menu:[
-          {fa:'cloud-upload', link:'上传001'},
-          {fa:'cloud-upload', link:'上传002'},
-          {fa:'cloud-upload', link:'上传003'}
+          {fa:'cloud-upload', link:'确认信息', url:'/upload/check-info'},
+          {fa:'cloud-upload', link:'上传表格', url:'/upload/ul-excel'}
         ]},
         {fa:'check-square-o', link:'审核中', url:'/checking', menu:[
-          {fa:'check-square-o', link:'审核001'},
-          {fa:'check-square-o', link:'审核002'},
-          {fa:'check-square-o', link:'审核003'},
-          {fa:'check-square-o', link:'审核004'}
+          {fa:'check-square-o', link:'待审核', url:'/checking/wait'}
         ]},
         {fa:'th-list', link:'我的提交', url:'/user', menu:[
-          {fa:'th-list', link:'提交001'},
-          {fa:'th-list', link:'提交002'},
-          {fa:'th-list', link:'提交003'},
-          {fa:'th-list', link:'提交004'},
-          {fa:'th-list', link:'提交005'}
+          {fa:'th-list', link:'信息列表', url:'/user/ul-msg'}
         ]}
       ],
     }

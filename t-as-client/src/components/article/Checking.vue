@@ -2,6 +2,7 @@
   <div id="checking">
     <h1 class="hid">{{ msg }}</h1>
     <h2>审核中</h2>
+    <router-view/>
   </div>
 </template>
 
@@ -16,6 +17,7 @@ export default {
     }
   },
   mounted(){
+    this.$router.push('checking/wait');
     this.$emit('setTitle', this.title);
   }
 }

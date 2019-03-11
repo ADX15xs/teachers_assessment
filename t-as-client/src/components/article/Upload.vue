@@ -2,7 +2,7 @@
   <div id="upload">
     <h1 class="hid">{{ msg }}</h1>
     <h2>上传信息</h2>
-    
+    <router-view/>    
   </div> 
 </template>
 
@@ -17,6 +17,7 @@ export default {
     }
   },
   mounted(){
+    this.$router.push('upload/check-info');
     this.$emit('setTitle', this.title);
   }
 }

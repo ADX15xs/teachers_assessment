@@ -4,8 +4,8 @@
     <nav class="nav-vertical">
       <ul>
         <li v-for="(nav, index) in navs" :key="index">
-          <a href="javascript:">
-            <i :class="`fa fa-${nav['fa']} fa-fw`"></i> {{ nav['link'] }}</a></li>
+          <router-link :to="nav['url']">
+            <i :class="`fa fa-${nav['fa']} fa-fw`"></i> {{ nav['link'] }}</router-link></li>
       </ul>
     </nav>
   </div>
@@ -20,8 +20,8 @@ export default {
     return{
       msg: 'NavActPub',
       navs: [
-        {fa:'free-code-camp', link:'首页001'},
-        {fa:'free-code-camp', link:'首页002'}
+        {fa:'free-code-camp', link:'最新消息', url:'/main/last-msg'},
+        {fa:'free-code-camp', link:'下载模板', url:'/main/dl-model'}
       ],
     }
   },
