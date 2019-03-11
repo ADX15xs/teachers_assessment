@@ -37,7 +37,7 @@ export default {
 <style scoped>
 section{width:900px; height:auto; margin:0 auto; text-align:center; font-size:0;}
 .nav-act-pub,
-article{display:inline-block;}
+article{display:inline-block; vertical-align:top;}
 .nav-act-pub{width:20%; height:100%; margin-right:2%; font-size:14px;}
 article{width:78%; height:100%; font-size:14px;}
 </style>
