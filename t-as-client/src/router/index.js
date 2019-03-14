@@ -6,6 +6,7 @@ import User from '@/components/article/User'
 import Upload from '@/components/article/Upload'
   import CheckInfo from '@/components/article/upload/CheckInfo'
   import UlExcel from '@/components/article/upload/UlExcel'
+  import UlFile from '@/components/article/upload/UlFile'
 import Checking from '@/components/article/Checking'
   import Wait from '@/components/article/checking/Wait'
 import Default from '@/components/article/Default'
@@ -31,7 +32,8 @@ export default new Router({
         {path: '/upload', name: 'Upload', component: Upload,
           children: [
             {path: 'check-info', name: 'CheckInfo', component: CheckInfo},
-            {path: 'ul-excel', name: 'UlExcel', component: UlExcel}
+            {path: 'ul-excel', name: 'UlExcel', component: UlExcel},
+            {path: 'ul-file', name: 'UlFile', component: UlFile}
           ]
         },
         {path: '/checking', name: 'Checking', component: Checking,

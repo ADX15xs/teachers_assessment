@@ -26,7 +26,8 @@ export default {
         ]},
         {fa:'cloud-upload', link:'上传', url:'/upload', menu:[
           {fa:'cloud-upload', link:'确认信息', url:'/upload/check-info'},
-          {fa:'cloud-upload', link:'上传表格', url:'/upload/ul-excel'}
+          {fa:'cloud-upload', link:'上传表格', url:'/upload/ul-excel'},
+          {fa:'cloud-upload', link:'上传附件', url:'/upload/ul-file'}
         ]},
         {fa:'check-square-o', link:'审核中', url:'/checking', menu:[
           {fa:'check-square-o', link:'待审核', url:'/checking/wait'}
