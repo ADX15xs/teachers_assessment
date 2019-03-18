@@ -6,6 +6,8 @@ import router from './router'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
 import 'font-awesome/css/font-awesome.min.css'
+import Blob from './excel/Blob'
+import Export2Excel from './excel/Export2Excel'
 
 Vue.config.productionTip = false
 
