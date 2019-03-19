@@ -25,6 +25,8 @@ export default {
   },
   methods: {
     // https://www.cnblogs.com/liguiwang/p/8430672.html
+    // https://www.cnblogs.com/liuxianan/p/js-excel.html
+    // https://www.cnblogs.com/songyz/p/songyz-xlsx.html
     importf(obj) {
       let _this = this;
       this.file = event.currentTarget.files[0];
@@ -66,6 +68,7 @@ export default {
             return;
           }
           var fromTo = '';
+          console.log(workbook.Sheets);
           for (var sheet in workbook.Sheets) {
             if (workbook.Sheets.hasOwnProperty(sheet)) {
               fromTo = workbook.Sheets[sheet]['!ref'];
