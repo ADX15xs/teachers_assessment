@@ -5,10 +5,10 @@
     <table>
       <thead>
         <tr>
-          <th>标题</th>
-          <th>版本</th>
-          <th>更新时间</th>
-          <th>下载</th>
+          <th><p class="dlTit">标题</p></th>
+          <th><p class="dlVer">版本</p></th>
+          <th><p class="dlTim">更新时间</p></th>
+          <th><p class="dlCon">下载</p></th>
         </tr>
       </thead>
       <tbody>
@@ -30,14 +30,14 @@ export default {
     return {
       msg: 'DlModel',
       dlList: [
-        {title:'asjdfhjkdkflasdfjasdaslkdfja', time:'2019/02/12 06:12:22', version:'v1.0.0', modelId: 'md01'},
-        {title:'asjdfhjkdkflasdfjasdaslkdfja', time:'2019/02/12 06:12:22', version:'v1.0.0', modelId: 'md02'},
-        {title:'asjdfhjkdkflasdfjasdaslkdfja', time:'2019/02/12 06:12:22', version:'v1.0.0', modelId: 'md03'},
-        {title:'asjdfhjkdkflasdfjasdaslkdfja', time:'2019/02/12 06:12:22', version:'v1.0.0', modelId: 'md04'},
-        {title:'asjdfhjkdkflasdfjasdaslkdfja', time:'2019/02/12 06:12:22', version:'v1.0.0', modelId: 'md05'},
-        {title:'asjdfhjkdkflasdfjasdaslkdfja', time:'2019/02/12 06:12:22', version:'v1.0.0', modelId: 'md06'},
-        {title:'asjdfhjkdkflasdfjasdaslkdfja', time:'2019/02/12 06:12:22', version:'v1.0.0', modelId: 'md07'},
-        {title:'asjdfhjkdkflasdfjasdaslkdfja', time:'2019/02/12 06:12:22', version:'v1.0.0', modelId: 'md08'},
+        // {title:'asjdfhjkdkflasdfjasdaslkdfja', time:'2019/02/12 06:12:22', version:'v1.0.0', modelId: 'md01'},
+        // {title:'asjdfhjkdkflasdfjasdaslkdfja', time:'2019/02/12 06:12:22', version:'v1.0.0', modelId: 'md02'},
+        // {title:'asjdfhjkdkflasdfjasdaslkdfja', time:'2019/02/12 06:12:22', version:'v1.0.0', modelId: 'md03'},
+        // {title:'asjdfhjkdkflasdfjasdaslkdfja', time:'2019/02/12 06:12:22', version:'v1.0.0', modelId: 'md04'},
+        // {title:'asjdfhjkdkflasdfjasdaslkdfja', time:'2019/02/12 06:12:22', version:'v1.0.0', modelId: 'md05'},
+        // {title:'asjdfhjkdkflasdfjasdaslkdfja', time:'2019/02/12 06:12:22', version:'v1.0.0', modelId: 'md06'},
+        // {title:'asjdfhjkdkflasdfjasdaslkdfja', time:'2019/02/12 06:12:22', version:'v1.0.0', modelId: 'md07'},
+        // {title:'asjdfhjkdkflasdfjasdaslkdfja', time:'2019/02/12 06:12:22', version:'v1.0.0', modelId: 'md08'},
       ]
     }
   }
@@ -46,7 +46,9 @@ export default {
 
 <style scoped>
 table{width:100%; height:auto;}
-table p{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+table p{overflow: hidden;text-overflow: ellipsis;white-space: nowrap; height:40px; line-height:40px;}
+table thead{background-color:#f5f5f6; border-bottom:2px solid #ddd;}
+table tbody tr{background-color:#fff; border-bottom:1px solid #ddd;}
 .dlTit{width:382px;}
 .dlVer{width:130px;}
 .dlTim{width:150px;}

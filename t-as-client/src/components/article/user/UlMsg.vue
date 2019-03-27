@@ -5,20 +5,21 @@
     <table>
       <thead>
         <tr>
-          <th>序号</th>
-          <th>论文名</th>
-          <th>类型</th>
-          <th>创建时间</th>
-          <th>修改时间</th>
+          <th><p>序号</p></th>
+          <th><p>论文名</p></th>
+          <th><p>类型</p></th>
+          <th><p>创建时间</p></th>
+          <th><p>修改时间</p></th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>001</td>
-          <td>我的论文001</td>
-          <td>类型+001</td>
-          <td>2018/02/03</td>
-          <td>2018/02/21</td>
+          <td><p>暂无</p></td>
+          <!-- <td><p>001</p></td>
+          <td><p>我的论文001</p></td>
+          <td><p>类型+001</p></td>
+          <td><p>2018/02/03</p></td>
+          <td><p>2018/02/21</p></td> -->
         </tr>
       </tbody>
     </table>
@@ -37,5 +38,8 @@ export default {
 </script>
 
 <style scoped>
-  table{margin:0 auto;}
+table{width:100%; height:auto;}
+table p{overflow: hidden;text-overflow: ellipsis;white-space: nowrap; height:40px; line-height:40px;}
+table thead{background-color:#f5f5f6; border-bottom:2px solid #ddd;}
+table tbody tr{background-color:#fff; border-bottom:1px solid #ddd;}
 </style>

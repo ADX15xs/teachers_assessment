@@ -102,7 +102,9 @@ export default {
 
 <style scoped>
 table{width:100%; height:auto;}
-table p{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+table p{overflow: hidden;text-overflow: ellipsis;white-space: nowrap; height:40px; line-height:40px;}
+table thead{background-color:#f5f5f6; border-bottom:2px solid #ddd;}
+table tbody tr{background-color:#fff; border-bottom:1px solid #ddd;}
 .msgSel{width:40px;}
 .msgTit{width:432px;}
 .msgTim{width:130px;}

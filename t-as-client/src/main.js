@@ -8,6 +8,8 @@ import camelCase from 'lodash/camelCase'
 import 'font-awesome/css/font-awesome.min.css'
 import Blob from './excel/Blob'
 import Export2Excel from './excel/Export2Excel'
+import ElementUI from 'element-ui';
+Vue.use(ElementUI);
 
 Vue.config.productionTip = false
 

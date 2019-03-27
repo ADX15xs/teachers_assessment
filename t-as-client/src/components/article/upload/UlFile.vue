@@ -8,11 +8,11 @@
       <table>
         <thead>
           <tr>
-            <th>序号</th>
-            <th>文件名</th>
-            <th>文件类型</th>
-            <th>文件大小</th>
-            <th>修改日期</th>
+            <th><p class="num">序号</p></th>
+            <th><p class="fileName">文件名</p></th>
+            <th><p class="fileType">文件类型</p></th>
+            <th><p class="fileSize">文件大小</p></th>
+            <th><p class="modiTime">修改日期</p></th>
           </tr>
         </thead>
         <tbody>
@@ -108,5 +108,8 @@ export default {
 </script>
 
 <style scoped>
-
+table{width:100%; height:auto;}
+table p{overflow: hidden;text-overflow: ellipsis;white-space: nowrap; height:40px; line-height:40px;}
+table thead{background-color:#f5f5f6; border-bottom:2px solid #ddd;}
+table tbody tr{background-color:#fff; border-bottom:1px solid #ddd;}
 </style>
