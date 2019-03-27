@@ -1,5 +1,18 @@
 const mongoose = require("mongoose");
 
+//信息目录
+const catalog_schema = new mongoose.Schema(
+  {
+    _id: {type: Number},
+    model: {type: Object},
+    excel_db: {type: String}
+  },
+  {
+    collection: "catalog_schema"
+  }
+);
+const catalog_model = mongoose.model("catalog_db",catalog_schema);
+
 
 
 //文章主要信息
@@ -119,6 +132,7 @@ const login_model = mongoose.model("login_db",login_schema);
 
 
 module.exports = {
+  catalog_model,
   main_model,
   article_model,
   draft_model,

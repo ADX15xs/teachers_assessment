@@ -191,7 +191,22 @@ onstage.get("/api/get/draft",async (ctx,next)=>{
 });
 
 
+backstage.post("/api/post/create_info_model", async (ctx,next)=>{
+  let code = 0;
+  let data = {};
+  let req_data = ctx.request.body;
 
+  try{
+    // 处理
+  }
+  catch(err){
+    code = 1;
+    debug(err);
+  }
+
+  await next();
+  ctx.body = {code,data};
+});
 
 backstage.post("/api/post/create_draft",async (ctx,next)=>{
   let code = 0;
