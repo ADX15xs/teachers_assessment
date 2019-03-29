@@ -46,5 +46,6 @@ export default {
 </script>
 
 <style scoped>
+h2{text-align:left;}
 table{width:100%;}
 </style>

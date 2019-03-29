@@ -14,7 +14,7 @@
       </thead>
       <tbody>
         <tr>
-          <td><p>暂无</p></td>
+          <td colspan="5"><p>暂无</p></td>
           <!-- <td><p>001</p></td>
           <td><p>我的论文001</p></td>
           <td><p>类型+001</p></td>
@@ -38,6 +38,7 @@ export default {
 </script>
 
 <style scoped>
+h2{text-align:left;}
 table{width:100%; height:auto;}
 table p{overflow: hidden;text-overflow: ellipsis;white-space: nowrap; height:40px; line-height:40px;}
 table thead{background-color:#f5f5f6; border-bottom:2px solid #ddd;}

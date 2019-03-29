@@ -3,7 +3,7 @@
     <h1 class="hid">{{ msg }}</h1>
     <h2>上传附件</h2>
     <h3>请选择您的附件文件</h3>
-    <form enctype="multipart/form-data" action="#" method="post">
+    <!-- <form enctype="multipart/form-data" action="#" method="post"> -->
       <input type="file" name="ulFile" id="ulFile" multiple="multiple">
       <table>
         <thead>
@@ -25,8 +25,8 @@
           </tr>
         </tbody>
       </table>
-      <input type="submit" value="上传">
-    </form>
+      <input type="submit" value="上传" @click="upload()">
+    <!-- </form> -->
   </div>
 </template>
 
@@ -102,12 +102,16 @@ export default {
       var hh = t.getHours() < 10? `0${t.getHours()}`: t.getHours();
       var mm = t.getMinutes() < 10? `0${t.getMinutes()}`: t.getMinutes();
       return `${YYYY}/${MM}/${DD} ${hh}:${mm}`
+    },
+    upload(){
+      alert('上传成功')
     }
   }
 }
 </script>
 
 <style scoped>
+h2{text-align:left;}
 table{width:100%; height:auto;}
 table p{overflow: hidden;text-overflow: ellipsis;white-space: nowrap; height:40px; line-height:40px;}
 table thead{background-color:#f5f5f6; border-bottom:2px solid #ddd;}

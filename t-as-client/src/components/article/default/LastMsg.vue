@@ -18,7 +18,7 @@
       </thead>
       <tbody>
         <tr v-show="newMsgs.length == 0">
-          <td colspan="4">没有任何新的消息！</td>
+          <td colspan="4"><p>没有任何新的消息！</p></td>
         </tr>
         <tr v-show="newMsgs.length > 0" v-for="(newMsg, index) in newMsgs" :key="index">
           <td><p class="msgSel"><input type="checkbox" name="selThis" :id="'selThis'+index" v-model="newMsg['state']" @click="checkMsg(newMsg)"></p></td>
@@ -42,11 +42,11 @@ export default {
       msg: 'LastMsg',
       selAll: false,
       newMsgs: [
-        {state:false, title:'1123123124sasfasdfasdf', time:'2018/12/31', read:false, msgId: 'msg01'},
-        {state:false, title:'1123123124sasfasdfasdf', time:'2018/12/31', read:true, msgId: 'msg02'},
-        {state:false, title:'1123123124sasfasdfasdf', time:'2018/12/31', read:true, msgId: 'msg03'},
-        {state:false, title:'1123123124sasfasdfasdf', time:'2018/12/31', read:false, msgId: 'msg04'},
-        {state:false, title:'1123123124sasfasdfasdf', time:'2018/12/31', read:false, msgId: 'msg05'},
+        // {state:false, title:'1123123124sasfasdfasdf', time:'2018/12/31', read:false, msgId: 'msg01'},
+        // {state:false, title:'1123123124sasfasdfasdf', time:'2018/12/31', read:true, msgId: 'msg02'},
+        // {state:false, title:'1123123124sasfasdfasdf', time:'2018/12/31', read:true, msgId: 'msg03'},
+        // {state:false, title:'1123123124sasfasdfasdf', time:'2018/12/31', read:false, msgId: 'msg04'},
+        // {state:false, title:'1123123124sasfasdfasdf', time:'2018/12/31', read:false, msgId: 'msg05'},
       ]
     }
   },
@@ -101,6 +101,7 @@ export default {
 </script>
 
 <style scoped>
+h2{text-align:left;}
 table{width:100%; height:auto;}
 table p{overflow: hidden;text-overflow: ellipsis;white-space: nowrap; height:40px; line-height:40px;}
 table thead{background-color:#f5f5f6; border-bottom:2px solid #ddd;}

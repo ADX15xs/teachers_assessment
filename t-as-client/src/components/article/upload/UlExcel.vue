@@ -8,6 +8,7 @@
      -->
     <h3>仅支持“xls”、“xlsx”类型Excel文件</h3>
     <input type="file" name="ulExcel" id="ulExcel" @change="importf(this)" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+    <input type="submit" value="上传" onclick="alert('上传成功')">
   </div>
 </template>
 
@@ -91,5 +92,6 @@ export default {
 </script>
 
 <style scoped>
+h2{text-align:left;}
 
 </style>

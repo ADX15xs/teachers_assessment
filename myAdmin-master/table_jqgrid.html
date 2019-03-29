@@ -39,6 +39,7 @@
                         <table id="table_list_2"></table>
                         <div id="pager_list_2"></div>
                     </div>
+                    <button class="btn btn-primary" type="submit" onclick="outPutFile()">导出</button>
                 </div>
             </div>
         </div>
@@ -62,6 +63,17 @@
 
     <!-- Page-Level Scripts -->
     <script>
+        function outPutFile(){
+            try{ 
+                var elemIF = document.createElement("iframe");   
+                elemIF.src = '//192.168.1.85/download/output_2.xlsx';   
+                elemIF.style.display = "none";
+                setTimeout(() => {
+                    document.body.appendChild(elemIF);
+                }, 500);
+            }catch(e){
+            } 
+        }
         $(document).ready(function () {
 
             $.jgrid.defaults.styleUI = 'Bootstrap';
@@ -69,240 +81,173 @@
             var mydata = [
                 {
                     id: "1",
-                    invdate: "2010-05-24",
-                    name: "test",
-                    note: "note",
-                    tax: "10.00",
-                    total: "2111.00"
+                    name: "论文1",
+                    note: "类型a",
+                    tax: "渠道1",
+                    invdate: "2019-1-25"
                 },
                 {
                     id: "2",
-                    invdate: "2010-05-25",
-                    name: "test2",
-                    note: "note2",
-                    tax: "20.00",
-                    total: "320.00"
+                    name: "论文2",
+                    note: "类型a",
+                    tax: "渠道2",
+                    invdate: "2019-1-26"
                 },
                 {
                     id: "3",
-                    invdate: "2007-09-01",
-                    name: "test3",
-                    note: "note3",
-                    tax: "30.00",
-                    total: "430.00"
+                    name: "论文3",
+                    note: "类型a",
+                    tax: "渠道3",
+                    invdate: "2019-1-27"
                 },
                 {
                     id: "4",
-                    invdate: "2007-10-04",
-                    name: "test",
-                    note: "note",
-                    tax: "10.00",
-                    total: "210.00"
+                    name: "论文4",
+                    note: "类型a",
+                    tax: "渠道4",
+                    invdate: "2019-1-28"
                 },
                 {
                     id: "5",
-                    invdate: "2007-10-05",
-                    name: "test2",
-                    note: "note2",
-                    tax: "20.00",
-                    total: "320.00"
+                    name: "论文5",
+                    note: "类型a",
+                    tax: "渠道5",
+                    invdate: "2019-1-29"
                 },
                 {
                     id: "6",
-                    invdate: "2007-09-06",
-                    name: "test3",
-                    note: "note3",
-                    tax: "30.00",
-                    total: "430.00"
+                    name: "论文6",
+                    note: "类型a",
+                    tax: "渠道6",
+                    invdate: "2019-1-30"
                 },
                 {
                     id: "7",
-                    invdate: "2007-10-04",
-                    name: "test",
-                    note: "note",
-                    tax: "10.00",
-                    total: "210.00"
+                    name: "论文7",
+                    note: "类型a",
+                    tax: "渠道7",
+                    invdate: "2019-1-31"
                 },
                 {
                     id: "8",
-                    invdate: "2007-10-03",
-                    name: "test2",
-                    note: "note2",
-                    amount: "300.00",
-                    tax: "21.00",
-                    total: "320.00"
+                    name: "论文8",
+                    note: "类型a",
+                    tax: "渠道8",
+                    invdate: "2019-2-1"
                 },
                 {
                     id: "9",
-                    invdate: "2007-09-01",
-                    name: "test3",
-                    note: "note3",
-                    amount: "400.00",
-                    tax: "30.00",
-                    total: "430.00"
+                    name: "论文9",
+                    note: "类型a",
+                    tax: "渠道9",
+                    invdate: "2019-2-2"
+                },
+                {
+                    id: "10",
+                    name: "论文10",
+                    note: "类型a",
+                    tax: "渠道10",
+                    invdate: "2019-2-3"
                 },
                 {
                     id: "11",
-                    invdate: "2007-10-01",
-                    name: "test",
-                    note: "note",
-                    amount: "200.00",
-                    tax: "10.00",
-                    total: "210.00"
+                    name: "论文11",
+                    note: "类型a",
+                    tax: "渠道11",
+                    invdate: "2019-2-4"
                 },
                 {
                     id: "12",
-                    invdate: "2007-10-02",
-                    name: "test2",
-                    note: "note2",
-                    amount: "300.00",
-                    tax: "20.00",
-                    total: "320.00"
+                    name: "论文12",
+                    note: "类型a",
+                    tax: "渠道12",
+                    invdate: "2019-2-5"
                 },
                 {
                     id: "13",
-                    invdate: "2007-09-01",
-                    name: "test3",
-                    note: "note3",
-                    amount: "400.00",
-                    tax: "30.00",
-                    total: "430.00"
+                    name: "论文13",
+                    note: "类型a",
+                    tax: "渠道13",
+                    invdate: "2019-2-6"
                 },
                 {
                     id: "14",
-                    invdate: "2007-10-04",
-                    name: "test",
-                    note: "note",
-                    amount: "200.00",
-                    tax: "10.00",
-                    total: "210.00"
+                    name: "论文14",
+                    note: "类型a",
+                    tax: "渠道14",
+                    invdate: "2019-2-7"
                 },
                 {
                     id: "15",
-                    invdate: "2007-10-05",
-                    name: "test2",
-                    note: "note2",
-                    amount: "300.00",
-                    tax: "20.00",
-                    total: "320.00"
+                    name: "论文15",
+                    note: "类型a",
+                    tax: "渠道15",
+                    invdate: "2019-2-8"
                 },
                 {
                     id: "16",
-                    invdate: "2007-09-06",
-                    name: "test3",
-                    note: "note3",
-                    amount: "400.00",
-                    tax: "30.00",
-                    total: "430.00"
+                    name: "论文16",
+                    note: "类型a",
+                    tax: "渠道16",
+                    invdate: "2019-2-9"
                 },
                 {
                     id: "17",
-                    invdate: "2007-10-04",
-                    name: "test",
-                    note: "note",
-                    amount: "200.00",
-                    tax: "10.00",
-                    total: "210.00"
+                    name: "论文17",
+                    note: "类型a",
+                    tax: "渠道17",
+                    invdate: "2019-2-10"
                 },
                 {
                     id: "18",
-                    invdate: "2007-10-03",
-                    name: "test2",
-                    note: "note2",
-                    amount: "300.00",
-                    tax: "20.00",
-                    total: "320.00"
+                    name: "论文18",
+                    note: "类型a",
+                    tax: "渠道18",
+                    invdate: "2019-2-11"
                 },
                 {
                     id: "19",
-                    invdate: "2007-09-01",
-                    name: "test3",
-                    note: "note3",
-                    amount: "400.00",
-                    tax: "30.00",
-                    total: "430.00"
+                    name: "论文19",
+                    note: "类型a",
+                    tax: "渠道19",
+                    invdate: "2019-2-12"
+                },
+                {
+                    id: "20",
+                    name: "论文20",
+                    note: "类型a",
+                    tax: "渠道20",
+                    invdate: "2019-2-13"
                 },
                 {
                     id: "21",
-                    invdate: "2007-10-01",
-                    name: "test",
-                    note: "note",
-                    amount: "200.00",
-                    tax: "10.00",
-                    total: "210.00"
+                    name: "论文21",
+                    note: "类型a",
+                    tax: "渠道21",
+                    invdate: "2019-2-14"
                 },
                 {
                     id: "22",
-                    invdate: "2007-10-02",
-                    name: "test2",
-                    note: "note2",
-                    amount: "300.00",
-                    tax: "20.00",
-                    total: "320.00"
+                    name: "论文22",
+                    note: "类型a",
+                    tax: "渠道22",
+                    invdate: "2019-2-15"
                 },
                 {
                     id: "23",
-                    invdate: "2007-09-01",
-                    name: "test3",
-                    note: "note3",
-                    amount: "400.00",
-                    tax: "30.00",
-                    total: "430.00"
+                    name: "论文23",
+                    note: "类型a",
+                    tax: "渠道23",
+                    invdate: "2019-2-16"
                 },
                 {
                     id: "24",
-                    invdate: "2007-10-04",
-                    name: "test",
-                    note: "note",
-                    amount: "200.00",
-                    tax: "10.00",
-                    total: "210.00"
-                },
-                {
-                    id: "25",
-                    invdate: "2007-10-05",
-                    name: "test2",
-                    note: "note2",
-                    amount: "300.00",
-                    tax: "20.00",
-                    total: "320.00"
-                },
-                {
-                    id: "26",
-                    invdate: "2007-09-06",
-                    name: "test3",
-                    note: "note3",
-                    amount: "400.00",
-                    tax: "30.00",
-                    total: "430.00"
-                },
-                {
-                    id: "27",
-                    invdate: "2007-10-04",
-                    name: "test",
-                    note: "note",
-                    amount: "200.00",
-                    tax: "10.00",
-                    total: "210.00"
-                },
-                {
-                    id: "28",
-                    invdate: "2007-10-03",
-                    name: "test2",
-                    note: "note2",
-                    amount: "300.00",
-                    tax: "20.00",
-                    total: "320.00"
-                },
-                {
-                    id: "29",
-                    invdate: "2007-09-01",
-                    name: "test3",
-                    note: "note3",
-                    amount: "400.00",
-                    tax: "30.00",
-                    total: "430.00"
+                    name: "论文24",
+                    note: "类型a",
+                    tax: "渠道24",
+                    invdate: "2019-2-17"
                 }
+
             ];
 
             // Configuration for jqGrid Example 2
@@ -314,7 +259,7 @@
                 shrinkToFit: true,
                 rowNum: 20,
                 rowList: [10, 20, 30],
-                colNames: ['序号', '日期', '客户', '金额', '运费', '总额', '备注'],
+                colNames: ['序号','论文','类型','渠道','出版时间'],
                 colModel: [
                     {
                         name: 'id',
@@ -325,50 +270,30 @@
                         search: true
                     },
                     {
-                        name: 'invdate',
-                        index: 'invdate',
-                        editable: true,
-                        width: 90,
-                        sorttype: "date",
-                        formatter: "date"
-                    },
-                    {
                         name: 'name',
                         index: 'name',
                         editable: true,
                         width: 100
                     },
                     {
-                        name: 'amount',
-                        index: 'amount',
+                        name: 'note',
+                        index: 'note',
                         editable: true,
-                        width: 80,
-                        align: "right",
-                        sorttype: "float",
-                        formatter: "number"
+                        width: 80
                     },
                     {
                         name: 'tax',
                         index: 'tax',
                         editable: true,
-                        width: 80,
-                        align: "right",
-                        sorttype: "float"
+                        width: 80
                     },
                     {
-                        name: 'total',
-                        index: 'total',
+                        name: 'invdate',
+                        index: 'invdate',
                         editable: true,
-                        width: 80,
-                        align: "right",
-                        sorttype: "float"
-                    },
-                    {
-                        name: 'note',
-                        index: 'note',
-                        editable: true,
-                        width: 100,
-                        sortable: false
+                        width: 90,
+                        sorttype: "date",
+                        formatter: "date"
                     }
                 ],
                 pager: "#pager_list_2",
@@ -382,7 +307,7 @@
             });
 
             // Add selection
-            $("#table_list_2").setSelection(4, true);
+            $("#table_list_2").setSelection(1, true);
 
 
             // Setup buttons
@@ -399,7 +324,6 @@
             // Add responsive to jqGrid
             $(window).bind('resize', function () {
                 var width = $('.jqGrid_wrapper').width();
-                $('#table_list_1').setGridWidth(width);
                 $('#table_list_2').setGridWidth(width);
             });
         });
