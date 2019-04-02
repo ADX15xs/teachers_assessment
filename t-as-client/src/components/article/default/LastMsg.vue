@@ -42,11 +42,11 @@ export default {
       msg: 'LastMsg',
       selAll: false,
       newMsgs: [
-        // {state:false, title:'1123123124sasfasdfasdf', time:'2018/12/31', read:false, msgId: 'msg01'},
-        // {state:false, title:'1123123124sasfasdfasdf', time:'2018/12/31', read:true, msgId: 'msg02'},
-        // {state:false, title:'1123123124sasfasdfasdf', time:'2018/12/31', read:true, msgId: 'msg03'},
-        // {state:false, title:'1123123124sasfasdfasdf', time:'2018/12/31', read:false, msgId: 'msg04'},
-        // {state:false, title:'1123123124sasfasdfasdf', time:'2018/12/31', read:false, msgId: 'msg05'},
+        {state:false, title:'1123123124sasfasdfasdf', time:'2018/12/31', read:false, msgId: 'msg01'},
+        {state:false, title:'1123123124sasfasdfasdf', time:'2018/12/31', read:true, msgId: 'msg02'},
+        {state:false, title:'1123123124sasfasdfasdf', time:'2018/12/31', read:true, msgId: 'msg03'},
+        {state:false, title:'1123123124sasfasdfasdf', time:'2018/12/31', read:false, msgId: 'msg04'},
+        {state:false, title:'1123123124sasfasdfasdf', time:'2018/12/31', read:false, msgId: 'msg05'},
       ]
     }
   },

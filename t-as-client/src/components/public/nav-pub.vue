@@ -12,8 +12,8 @@
         active-text-color="#ffd04b">
         <el-menu-item index="1"><i class="fa fa-free-code-camp fa-fw"></i> 首页</el-menu-item>
         <el-menu-item index="2"><i class="fa fa-cloud-upload fa-fw"></i> 上传</el-menu-item>
-        <el-menu-item index="3"><i class="fa fa-check-square-o fa-fw"></i> 审核中</el-menu-item>
-        <el-menu-item index="4"><i class="fa fa-th-list fa-fw"></i> 我的提交</el-menu-item>
+        <!-- <el-menu-item index="3"><i class="fa fa-check-square-o fa-fw"></i> 审核中</el-menu-item> -->
+        <el-menu-item index="3"><i class="fa fa-th-list fa-fw"></i> 我的提交</el-menu-item>
       </el-menu>
     </nav>
   </div>
@@ -38,9 +38,9 @@ export default {
           {fa:'cloud-upload', link:'上传表格', url:'/upload/ul-excel'},
           {fa:'cloud-upload', link:'上传附件', url:'/upload/ul-file'}
         ]},
-        {fa:'check-square-o', link:'审核中', url:'/checking', menu:[
-          {fa:'check-square-o', link:'待审核', url:'/checking/wait'}
-        ]},
+        // {fa:'check-square-o', link:'审核中', url:'/checking', menu:[
+        //   {fa:'check-square-o', link:'待审核', url:'/checking/wait'}
+        // ]},
         {fa:'th-list', link:'我的提交', url:'/user', menu:[
           {fa:'th-list', link:'信息列表', url:'/user/ul-msg'}
         ]}
