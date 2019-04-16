@@ -79,20 +79,18 @@ exports.update = async (ctx, next) => {
     }
   })
 
-  user = await user.save()
-
-  ctx.session = ctx.session || {}
-  ctx.session.user = user
+  try{
+    user = await user.save()
+    console.log('saved')
+  }
+  catch(err){
+    user = null
+    console.log(err)
+  }
 
   ctx.body = {
-    success: true,
-    data: {
-      _id: user._id,
-      workId: user.workId,
-      realName: user.realName,
-      type: user.type,
-      accessToken: user.accessToken
-    }
+    success: user?true: false,
+    data: user
   }
 }
 
