@@ -5,6 +5,7 @@ const json = require('koa-json')
 const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
+const session = require('koa-session')
 const registerRouter = require('./routes/routes')
 
 // error handler
@@ -29,6 +30,26 @@ app.use(async (ctx, next) => {
   const ms = new Date() - start
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
 })
+
+// 连接数据库
+const connect = require('./config/dbConnect')
+connect();
+// 注册model
+const walk = require('./middelware/registModel')
+walk();
+
+// session
+app.keys = ['some secret hurr'];  /* cookie的签名 */
+const CONFIG = {
+  key: 'koa:sess',    /** 默认的cookie签名 */
+  maxAge: 86400000,   /** cookie的最大过期时间 */
+  overwrite:  true,   /** 是否可以overwrite (默认default true) */
+  httpOnly:   true,   /** cookie是否只有服务器端可以访问 httpOnly or not (default true) */
+  signed:     true,   /** 签名默认true */
+  rolling:    false,  /** 每次请求强行设置cookie */
+  renew:      false,  /** cookie快过期时自动renew */
+};
+app.use(session(CONFIG, app));
 
 // routes
 app.use(registerRouter())
