@@ -1,14 +1,14 @@
 var mongoose = require('mongoose')
-var User = mongoose.model('User')
+var File = mongoose.model('File')
 
 /**
- * 通过工号查询
- * @param  {[type]} options.workId [description]
+ * 通过对应数据的id查询
+ * @param  {[type]} options._msgId [description]
  * @return {[type]}                [description]
  */
-exports.findByWorkId = async ({ workId }) => {
+exports.findByMsgId = async ({ _msgId }) => {
 	try{
-		var query = await User.find({ workId });
+		var query = await File.find({ _msgId });
   	return query[0]? query[0]: {}
 	}
 	catch(err){
@@ -17,12 +17,12 @@ exports.findByWorkId = async ({ workId }) => {
 }
 
 /**
- * 查找所有用户
+ * 查找所有附件
  * @return {[type]} [description]
  */
-exports.findAllUsers = async () => {
+exports.findAllFiles = async () => {
 	try{
-		var query = await User.find({});
+		var query = await File.find({});
   	return query? query: []
 	}
 	catch(err){
@@ -31,14 +31,14 @@ exports.findAllUsers = async () => {
 }
 
 /**
- * 增加用户
- * @param  {[User]} user [mongoose.model('User')]
+ * 增加附件记录
+ * @param  {[File]} file [mongoose.model('File')]
  * @return {[type]}      [description]
  */
-exports.addUser = async (user) => {
+exports.addFile = async (file) => {
 	try{
-		user = await user.save()
-		return {boo:true, data:user}
+		file = await file.save()
+		return {boo:true, data:file}
 	}
 	catch(err){
 		return {boo:false, err:err}
@@ -46,14 +46,14 @@ exports.addUser = async (user) => {
 }
 
 /**
- * 删除用户
- * @param  {[type]} options.workId [description]
+ * 删除附件记录
+ * @param  {[type]} options._id [description]
  * @return {[type]}                [description]
  */
-exports.deleteUser = async ({ workId }) => {
+exports.deleteFile = async ({ _id }) => {
   var flag = false
   console.log('flag==========>' + flag)
-  await User.remove({ workId }, function (err) {
+  await File.remove({ _id }, function (err) {
     if (err) {
       flag = false
     } else {
